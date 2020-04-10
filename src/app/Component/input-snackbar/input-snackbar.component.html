@@ -1,0 +1,15 @@
+<div class="container" fxLayout>
+    <div fxFlex="90%">
+        <form [formGroup] = "meterForm">
+            <mat-form-field> 
+              <mat-label>Meter Name</mat-label>
+              <input matInput formControlName="meterName">
+            </mat-form-field>
+         </form>
+    </div>
+    <div fxFlex="10%">
+        <button mat-icon-button (click)="saveInput()">
+            OK
+        </button>
+    </div>
+</div>

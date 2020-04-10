@@ -1,0 +1,55 @@
+<div class="containers" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="30px"
+    style="margin-top: 70px;">
+    <div fxFlex>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Action : Undo</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form [formGroup]="meterForm">
+                    <mat-form-field>
+                        <mat-label>Meter Name</mat-label>
+                        <input matInput formControlName="meterName">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Voltage</mat-label>
+                        <input matInput formControlName="voltage">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Current</mat-label>
+                        <input matInput formControlName="current">
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button (click)="EditForm()">Edit</button>
+                <button mat-raised-button (click)="saveForm(meterForm.value)">Save</button>
+                <!-- <button mat-raised-button (click)="openSnackBar('Message','Action')">SnackBar with message and Action</button> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div fxFlex>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Actions : Display only message | Input from user | Redirect | Export</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+                    <div fxFlex>
+                        <button mat-raised-button (click)="displayMessageSnackbar()">Display Message Only</button>
+                    </div>
+                    <div fxFlex>
+                        <button mat-raised-button (click)="openInputInSnackbar()">Open Input box in snackbar</button>
+                    </div>
+                    <div fxFlex>
+                        <button mat-raised-button (click)="redirectToAnotherPage()">Redirect to another page in snackbar</button>
+                    </div>
+                    <div fxFlex>
+                    <button mat-raised-button (click)="exportAsXLSX()">Export as XLSX </button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
